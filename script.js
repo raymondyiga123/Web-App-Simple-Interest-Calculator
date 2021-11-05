@@ -2,24 +2,12 @@ function compute()
 {
     var principal = document.getElementById("amount").value;
     
-    if(principal == ""){
-        alert("Please enter the amount(Principal), Field cannot be empty");
-        document.getElementById("amount").value="";
-        amount.focus();
+    if(principal == "" || principal <= 0)
+    {
+        alert("Enter a positive number");
+        document.getElementById("amount").focus();
         return;
-  } 
-  if(principal == 0){
-        alert("The Principal cannot be 0, Please enter a valid amount above 0");
-        document.getElementById("amount").value="";
-        amount.focus();
-        return;
-  }
-  if(principal <= 0){
-    alert("Please Enter a Positive Number/Amount");
-    document.getElementById("amount").value="";
-    amount.focus();
-    return;
-  }
+    }
 
     var rate = document.getElementById("rate").value;
     var years = document.getElementById("years").value;
