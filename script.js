@@ -5,6 +5,7 @@ function compute()
     if(principal == "" || principal <= 0)
     {
         alert("Enter a positive number");
+        document.getElementById("amount").value = "";
         document.getElementById("amount").focus();
         return;
     }
